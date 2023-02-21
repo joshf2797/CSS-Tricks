@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card-group,
+.card {
+  aspect-ratio: 5/7;
+}
+
+.card-group,
+.big-card {
+  width: 30vmin;
+}
+
+.card {
+  aspect-ratio: 5/7;
+  border-radius: 1vmin;
+  position: absolute;
+  transition: transform 800ms cubic-bezier(0.15, 0.77, 0.33, 0.93);
+}
+
+.big-card {
+  width: 30vmin;
+}
+
+.little-card {
+  width: 15vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
+}
+
+.little-card:nth-child(1) {
+  background-color: crimson;
+}
+.little-card:nth-child(2) {
+  background-color: gold;
+}
+.little-card:nth-child(3) {
+  background-color: powderblue;
+}
+
+.big-card:nth-child(4) {
+  background-color: aqua;
+  transform: translate(10%, -7%) rotate(4deg);
+}
+
+.big-card:nth-child(5) {
+  background-color: blueviolet;
+  transform: translate(4%, -8%) rotate(-2deg);
+}
+
+.big-card:nth-child(6) {
+  background-image: url("images/Screenshot 2023-02-16 at 11.09.22 PM.png");
+  background-size: cover;
+  transform: translate(-7%, -12%);
+}
+
+.big-card:nth-child(7) {
+  background-image: url("images/Screenshot 2023-02-16 at 10.51.37 PM 1.png");
+  background-size: cover;
+  transform: translate(0%, -6%) rotate(1deg);
+}
+
+.card-group:hover > .card {
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(250%, -150%);
+}
+.card-group:hover > .little-card:nth-child(2) {
+  transform: translate(-350%, -150%);
+}
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(-50%, 130%);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-70%, 15%) rotate(-20deg);
+}
+.card-group:hover > .big-card:nth-child(5) {
+  transform: translate(-40%, -12%) rotate(-15deg);
+}
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(40%, -12%) rotate(15deg);
+}
+.card-group:hover > .big-card:nth-child(7) {
+  transform: translate(70%, 15%) rotate(18deg);
+}
+#bc1:hover,
+#bc2:hover,
+#bc3:hover,
+#bc4:hover {
+  z-index: 1;
+}
